@@ -1,4 +1,4 @@
-/*
+/*InstallKeybdHook
     Setup
 */
 
@@ -13,10 +13,12 @@ if !A_IsAdmin
     Run *RunAs "%A_ScriptFullPath%"
     ExitApp
 }
-ft := new FindTextClass
-temp := WinExist("Archery-Golo - Dofus Retro v1.38.8")
-ft.BindWindow(WinExist("Archery-Golo - Dofus Retro v1.38.8"),0,0,0,0,0,0,0,0,0,0)
-MsgBox, % temp
+
+;temp := WinExist("Zaborigene - Dofus Retro v1.38.8")
+FindText_BindWindow(WinExist("Zaborigene - Dofus Retro v1.38.8"), 4, 1, 1)
+;MsgBox, % temp
+
+
 /*
     Fonction
 */
@@ -28,7 +30,7 @@ ReturnWaitTime() {
 
 RandomPos(b) {
     Random, b1, b-5, b+5
-    return x%b1%
+    return b1
 }
 
 /* 
@@ -53,7 +55,7 @@ While, End!=1 {
    Send {e down}
    xpos:=RandomPos(633)
    ypos:=RandomPos(62)
-   ControlClick, x%xpos%  y%ypos%, Archery-Golo - Dofus Retro v1.38.8
+   ControlClick, x%xpos%  y%ypos%, Zaborigene - Dofus Retro v1.38.8
    Sleep, ReturnWaitTime()
    Send {e up}
    Sleep, 5000
@@ -62,7 +64,7 @@ While, End!=1 {
  if (ok:=FindText(19, 79, 251, 125, 0, 0, Map2))
  {
    Send {e down}
-   ControlClick, x54 y551, Archery-Golo - Dofus Retro v1.38.8
+   ControlClick, x54 y551, Zaborigene - Dofus Retro v1.38.8
    Sleep, ReturnWaitTime()
    Send {e up}
    Sleep, 5000
@@ -71,7 +73,7 @@ While, End!=1 {
  if (ok:=FindText(19, 79, 251, 125, 0, 0, Map3))
  {
    Send {e down} 
-   ControlClick, x917 y793, Archery-Golo - Dofus Retro v1.38.8
+   ControlClick, x917 y793, Zaborigene - Dofus Retro v1.38.8
    Sleep, ReturnWaitTime()
    Send {e up}
    Sleep, 5000
@@ -80,7 +82,7 @@ While, End!=1 {
  if (ok:=FindText(19, 79, 251, 125, 0, 0, Map4))
  {
    Send {e down}
-   ControlClick, x153 y793, Archery-Golo - Dofus Retro v1.38.8
+   ControlClick, x153 y793, Zaborigene - Dofus Retro v1.38.8
    Sleep, ReturnWaitTime()
    Send {e up}
    Sleep, 5000
@@ -89,7 +91,7 @@ While, End!=1 {
  if (ok:=FindText(19, 79, 251, 125, 0, 0, Map5))
  {
    Send {e down} 
-   ControlClick, x1302 y744, Archery-Golo - Dofus Retro v1.38.8
+   ControlClick, x1302 y744, Zaborigene - Dofus Retro v1.38.8
    Sleep, ReturnWaitTime()
    Send {e up}
    Sleep, 5000
@@ -99,7 +101,7 @@ While, End!=1 {
  {
    Send {e down}
    MsgBox, RandomPos(1301)
-   ControlClick, x1301 y257, Archery-Golo - Dofus Retro v1.38.8
+   ControlClick, x1301 y257, Zaborigene - Dofus Retro v1.38.8
    Sleep, ReturnWaitTime()
    Send {e up}
    Sleep, 5000
@@ -108,7 +110,7 @@ While, End!=1 {
  if (ok:=FindText(19, 79, 251, 125, 0, 0, Map7))
  {
    Send {e down}
-   ControlClick, x1293 y696, Archery-Golo - Dofus Retro v1.38.8
+   ControlClick, x1293 y696, Zaborigene - Dofus Retro v1.38.8
    Sleep, ReturnWaitTime()
    Send {e up}
    Sleep, 5000
