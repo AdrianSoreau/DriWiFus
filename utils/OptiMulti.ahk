@@ -19,7 +19,7 @@ RandomWaitTime() {
 }
 
 RandomPasse() {
-    Random, a, 900, 1100
+    Random, a, 500, 600
     return a
 }
 
@@ -68,15 +68,19 @@ return
     Molette bas sur tous les comptes (Ctrl+MoletteBas)
 */
 
-^WheelDown::
++WheelDown::
     MouseGetPos, xpos, ypos
-    ControlClick, x%xpos% y%ypos%, Zarcheyre-[NBR] - Dofus Retro v1.38.8, ,WD
+    ControlClick, x%xpos% y%ypos%, Zarcheyre-[NBR] - Dofus Retro v1.38.8
+    ControlClick, x%xpos% y%ypos%, Zarcheyre-[NBR] - Dofus Retro v1.38.8, ,WheelDown
     Sleep, RandomWaitTime()
-    ControlClick, x%xpos% y%ypos%, Zacross-Themap - Dofus Retro v1.38.8, ,WD
+    ControlClick, x%xpos% y%ypos%, Zacross-Themap - Dofus Retro v1.38.8
+    ControlClick, x%xpos% y%ypos%, Zacross-Themap - Dofus Retro v1.38.8, ,WheelDown
     Sleep, RandomWaitTime()
-    ControlClick, x%xpos% y%ypos%, Zarrow - Dofus Retro v1.38.8, ,WD
+    ControlClick, x%xpos% y%ypos%, Zarrow - Dofus Retro v1.38.8
+    ControlClick, x%xpos% y%ypos%, Zarrow - Dofus Retro v1.38.8, ,WheelDown
     Sleep, RandomWaitTime()
-    ControlClick, x%xpos% y%ypos%, Zarbalete - Dofus Retro v1.38.8, ,WD
+    ControlClick, x%xpos% y%ypos%, Zarbalete - Dofus Retro v1.38.8
+    ControlClick, x%xpos% y%ypos%, Zarbalete - Dofus Retro v1.38.8, , WheelDown
     Sleep, RandomWaitTime()
 return
 
@@ -84,7 +88,7 @@ return
     Molette haut sur tous les comptes (Ctrl+MoletteHaut)
 */
 
-^WheelUp::
++WheelUp::
     MouseGetPos, xpos, ypos
     ControlClick, x%xpos% y%ypos%, Zarcheyre-[NBR] - Dofus Retro v1.38.8, ,WU
     Sleep, RandomWaitTime()
