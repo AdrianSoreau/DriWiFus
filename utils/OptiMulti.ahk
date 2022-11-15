@@ -8,6 +8,7 @@ if !A_IsAdmin
     ExitApp
 }
 
+Soleil:="|<>**30$8.TaRVks7zU"
 Passe:="|<>*160$40.zzzzzzzzs7lzzzzUT3zzzy1w7zzzs7kDzzzUT0Tzzy1w0zz00001zw00003zk00007z00000Dw00000zk00001z00000Dw00001zk0000Dz00001zzzUT0Dzzy1w0zzzs7k7zzzUT0zzzy1w7zzzs7kzzzzzzzzzU"
 /*
     Function :
@@ -31,8 +32,17 @@ RandomClickPos(a) {
 /*
     Click sur les 4 comptes (Ctrl+Click)
 */
+While, End!=1 {
+if (temp:=FindText(X, Y, 19, 79, 1800, 1800, 0.2, 0.2, Soleil)) {
+    for k, v in temp { ; Loop over all the search results in "ok". "k" will be the nth result, and "v" will contain the result itself.
+        MouseMove, v[1], v[2]
+        MsgBox, % "Result number " k " is located at X" v[1] " Y" v[2]
 
-^LButton::
+}
+}
+}
+
+^LButton:
     MouseGetPos, xpos, ypos
     ControlClick, x%xpos% y%ypos%, Zarcheyre-[NBR] - Dofus Retro v1.38.8
     Sleep, RandomWaitTime()
