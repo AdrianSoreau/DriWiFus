@@ -1,7 +1,7 @@
 #SingleInstance, Force
 SendMode Input
 SetWorkingDir, %A_ScriptDir%
-#Include, findText.ahk
+
 if !A_IsAdmin
 {
     Run *RunAs "%A_ScriptFullPath%"
@@ -34,13 +34,17 @@ RandomClickPos(a) {
 
 ^LButton::
     MouseGetPos, xpos, ypos
-    ControlClick, x%xpos% y%ypos%, Zarcheyre-[NBR] - Dofus Retro v1.38.8
+    ControlClick, x%xpos% y%ypos%, Mhand-Poo-[NBR] - Dofus Retro v1.38.8
     Sleep, RandomWaitTime()
-    ControlClick, x%xpos% y%ypos%, Zacross-Themap - Dofus Retro v1.38.8
+    ControlClick, x%xpos% y%ypos%, Mhand-Buffala-[NBR] - Dofus Retro v1.38.8
     Sleep, RandomWaitTime()
-    ControlClick, x%xpos% y%ypos%, Zarrow - Dofus Retro v1.38.8
+    ControlClick, x%xpos% y%ypos%, Mhand-Itsitira-[NBR] - Dofus Retro v1.38.8
     Sleep, RandomWaitTime()
-    ControlClick, x%xpos% y%ypos%, Zarbalete - Dofus Retro v1.38.8
+    ControlClick, x%xpos% y%ypos%, Zargent-[NBR] - Dofus Retro v1.38.8
+    Sleep, RandomWaitTime()
+    ControlClick, x%xpos% y%ypos%, Zaflouze - Dofus Retro v1.38.8
+    Sleep, RandomWaitTime()
+    ControlClick, x%xpos% y%ypos%, Zavare - Dofus Retro v1.38.8
     Sleep, RandomWaitTime()
 return
 
@@ -50,17 +54,23 @@ return
 
 ^RButton::
     MouseGetPos, xpos, ypos
-    ControlClick, x%xpos% y%ypos%, Zarcheyre-[NBR] - Dofus Retro v1.38.8
-    ControlClick, x%xpos% y%ypos%, Zarcheyre-[NBR] - Dofus Retro v1.38.8, ,R
+    ControlClick, x%xpos% y%ypos%, Mhand-Poo-[NBR] - Dofus Retro v1.38.8
+    ControlClick, x%xpos% y%ypos%, Mhand-Poo-[NBR] - Dofus Retro v1.38.8, ,R
     Sleep, RandomWaitTime()
-    ControlClick, x%xpos% y%ypos%, Zacross-Themap - Dofus Retro v1.38.8
-    ControlClick, x%xpos% y%ypos%, Zacross-Themap - Dofus Retro v1.38.8, ,R
+    ControlClick, x%xpos% y%ypos%, Mhand-Buffala-[NBR] - Dofus Retro v1.38.8
+    ControlClick, x%xpos% y%ypos%, Mhand-Buffala-[NBR] - Dofus Retro v1.38.8, ,R
     Sleep, RandomWaitTime()
-    ControlClick, x%xpos% y%ypos%, Zarrow - Dofus Retro v1.38.8
-    ControlClick, x%xpos% y%ypos%, Zarrow - Dofus Retro v1.38.8, ,R
+    ControlClick, x%xpos% y%ypos%, Mhand-Itsitira-[NBR] - Dofus Retro v1.38.8
+    ControlClick, x%xpos% y%ypos%, Mhand-Itsitira-[NBR] - Dofus Retro v1.38.8, ,R
     Sleep, RandomWaitTime()
-    ControlClick, x%xpos% y%ypos%, Zarbalete - Dofus Retro v1.38.8
-    ControlClick, x%xpos% y%ypos%, Zarbalete - Dofus Retro v1.38.8, ,R
+    ControlClick, x%xpos% y%ypos%, Zargent-[NBR] - Dofus Retro v1.38.8
+    ControlClick, x%xpos% y%ypos%, Zargent-[NBR] - Dofus Retro v1.38.8, ,R
+    Sleep, RandomWaitTime()
+    ControlClick, x%xpos% y%ypos%, Zaflouze - Dofus Retro v1.38.8
+    ControlClick, x%xpos% y%ypos%, Zaflouze - Dofus Retro v1.38.8, ,R
+    Sleep, RandomWaitTime()
+    ControlClick, x%xpos% y%ypos%, Zavare - Dofus Retro v1.38.8
+    ControlClick, x%xpos% y%ypos%, Zavare - Dofus Retro v1.38.8, ,R
     Sleep, RandomWaitTime()
 return
 
